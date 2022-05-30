@@ -1,0 +1,16 @@
+C:\Visual Studio 2022 solutions\Cows and Bulls\Cows and Bulls\bin\Debug\net5.0\Cows and Bulls.exe
+C:\Visual Studio 2022 solutions\Cows and Bulls\Cows and Bulls\bin\Debug\net5.0\Cows and Bulls.deps.json
+C:\Visual Studio 2022 solutions\Cows and Bulls\Cows and Bulls\bin\Debug\net5.0\Cows and Bulls.runtimeconfig.json
+C:\Visual Studio 2022 solutions\Cows and Bulls\Cows and Bulls\bin\Debug\net5.0\Cows and Bulls.runtimeconfig.dev.json
+C:\Visual Studio 2022 solutions\Cows and Bulls\Cows and Bulls\bin\Debug\net5.0\Cows and Bulls.dll
+C:\Visual Studio 2022 solutions\Cows and Bulls\Cows and Bulls\bin\Debug\net5.0\Cows and Bulls.pdb
+C:\Visual Studio 2022 solutions\Cows and Bulls\Cows and Bulls\obj\Debug\net5.0\Cows and Bulls.csproj.AssemblyReference.cache
+C:\Visual Studio 2022 solutions\Cows and Bulls\Cows and Bulls\obj\Debug\net5.0\Cows and Bulls.GeneratedMSBuildEditorConfig.editorconfig
+C:\Visual Studio 2022 solutions\Cows and Bulls\Cows and Bulls\obj\Debug\net5.0\Cows and Bulls.AssemblyInfoInputs.cache
+C:\Visual Studio 2022 solutions\Cows and Bulls\Cows and Bulls\obj\Debug\net5.0\Cows and Bulls.AssemblyInfo.cs
+C:\Visual Studio 2022 solutions\Cows and Bulls\Cows and Bulls\obj\Debug\net5.0\Cows and Bulls.csproj.CoreCompileInputs.cache
+C:\Visual Studio 2022 solutions\Cows and Bulls\Cows and Bulls\obj\Debug\net5.0\Cows and Bulls.dll
+C:\Visual Studio 2022 solutions\Cows and Bulls\Cows and Bulls\obj\Debug\net5.0\refint\Cows and Bulls.dll
+C:\Visual Studio 2022 solutions\Cows and Bulls\Cows and Bulls\obj\Debug\net5.0\Cows and Bulls.pdb
+C:\Visual Studio 2022 solutions\Cows and Bulls\Cows and Bulls\obj\Debug\net5.0\Cows and Bulls.genruntimeconfig.cache
+C:\Visual Studio 2022 solutions\Cows and Bulls\Cows and Bulls\obj\Debug\net5.0\ref\Cows and Bulls.dll

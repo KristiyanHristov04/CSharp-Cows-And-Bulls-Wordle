@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "1CVq8GEeMLKYMQEdA/4D7rg28etsiMNA/6EvWrIcXZuitTq+cF01V52VRZEBlEf9vHXFiiz4v8laTmX+pIRPtQ==",
+  "success": true,
+  "projectFilePath": "C:\\Visual Studio 2022 solutions\\Cows and Bulls\\Cows and Bulls\\Cows and Bulls.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\KrisPC\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.17\\microsoft.netcore.app.host.win-x64.5.0.17.nupkg.sha512"
+  ],
+  "logs": []
+}
