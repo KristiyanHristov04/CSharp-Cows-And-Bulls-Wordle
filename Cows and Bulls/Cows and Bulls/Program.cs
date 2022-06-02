@@ -7,14 +7,15 @@ namespace Cows_and_Bulls
     {
         static void Main(string[] args)
         {
-            string[] words = new string[] { "pizza", "movie", "horse", "agent", "adult", "apple", "basis", "beach", "cycle", "crown", "doubt", "donut", "mouse", "plate" };
+            string[] words = new string[] { "movie", "horse", "agent", "adult", "beach", "crown", "doubt", "donut", "mouse", "plate", "drone", "cabel", "house" };
             Random random = new Random();
             int randomWordGenerator = random.Next(0, words.Length);
-            int leftAttempts = 5;
             string currentWordToBeFound = words[randomWordGenerator];
-
+            int leftAttempts = 10;
             int cows = 0;
             int bulls = 0;
+            List<char> metChars = new List<char>();
+            bool isCharMet = false;
 
             Console.Write("Do you want to show all characters that are on right place(bulls)?\nPress [y] or [n]: ");
             char difficulty = Convert.ToChar(Console.ReadLine());
@@ -24,6 +25,7 @@ namespace Cows_and_Bulls
             {
                 while (leftAttempts > 0)
                 {
+                    List<char> bullsInWord = new List<char>();
                     Console.Write("Please enter a word: ");
                     string input = Console.ReadLine();
                     while (input.Length != 5)
@@ -48,19 +50,48 @@ namespace Cows_and_Bulls
                                 if (Convert.ToString(input[i]).ToLower() == Convert.ToString(currentWordToBeFound[j]).ToLower() && i == j)//If statement that checks if there is a bull
                                 {
                                     bulls++;
+                                    bullsInWord.Add(input[i]);
+                                    metChars.Add(input[i]);
                                 }
+                            }
+                        }
+
+                        for (int i = 0; i < input.Length; i++)
+                        {
+                            isCharMet = false;
+                            for (int j = 0; j < currentWordToBeFound.Length; j++)
+                            {
                                 if (Convert.ToString(input[i]).ToLower() == Convert.ToString(currentWordToBeFound[j]).ToLower() && i != j)//If statement that checks if there is a cow
                                 {
-                                    cows++;
+                                    for (int k = 0; k < metChars.Count; k++)
+                                    {
+                                        if (metChars[k] == input[i])
+                                        {
+                                            isCharMet = true;
+                                        }
+                                    }
+                                    if (!isCharMet)
+                                    {
+                                        cows++;
+                                    }
                                 }
                             }
                         }
                         Console.WriteLine($"Cows {cows} Bulls {bulls}");
+                        Console.WriteLine();
                         bulls = 0;
                         cows = 0;
                         leftAttempts--;
                         Console.WriteLine($"You have {leftAttempts} attempts left.");
+                        bullsInWord = null;
                         Console.WriteLine();
+                        if (leftAttempts <= 0)
+                        {
+                            Console.ForegroundColor = ConsoleColor.Red;
+                            Console.WriteLine($"The word was [{currentWordToBeFound}]");
+                            Console.ForegroundColor = ConsoleColor.Gray;
+                            return;
+                        }
                     }
                 }
             }
@@ -94,12 +125,31 @@ namespace Cows_and_Bulls
                                 {
                                     bulls++;
                                     bullsInWord.Add(input[i]);
-                                }
-                                if (Convert.ToString(input[i]).ToLower() == Convert.ToString(currentWordToBeFound[j]).ToLower() && i != j)//If statement that checks if there is a cow
-                                {
-                                    cows++;
+                                    metChars.Add(input[i]);
                                 }
                             }
+                        }
+
+                        for (int i = 0; i < input.Length; i++)
+                        {
+                            isCharMet = false;
+                            for (int j = 0; j < currentWordToBeFound.Length; j++)
+                            {
+                                if (Convert.ToString(input[i]).ToLower() == Convert.ToString(currentWordToBeFound[j]).ToLower() && i != j)//If statement that checks if there is a cow
+                                {
+                                    for (int k = 0; k < metChars.Count; k++)
+                                    {
+                                        if (metChars[k] == input[i])
+                                        {
+                                            isCharMet = true;
+                                        }
+                                    }
+                                    if (!isCharMet)
+                                    {
+                                        cows++;
+                                    }
+                                }
+                            }                            
                         }
                         Console.WriteLine($"Cows {cows} Bulls {bulls}");
                         foreach (var bull in bullsInWord)
@@ -115,12 +165,16 @@ namespace Cows_and_Bulls
                         Console.WriteLine($"You have {leftAttempts} attempts left.");
                         bullsInWord = null;
                         Console.WriteLine();
+                        if (leftAttempts <= 0)
+                        {
+                            Console.ForegroundColor = ConsoleColor.Red;
+                            Console.WriteLine($"The word was [{currentWordToBeFound}]");
+                            Console.ForegroundColor = ConsoleColor.Gray;
+                            return;
+                        }
                     }
                 }
-            }
-            Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine($"The word was [{currentWordToBeFound}]");
-            Console.ForegroundColor = ConsoleColor.Gray;
+            }            
         }
     }
 }
